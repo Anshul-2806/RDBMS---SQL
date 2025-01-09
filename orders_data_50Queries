@@ -1,17 +1,15 @@
---orders_data
-
-CREATE TABLE [dbo].[orders_data](
-	[order_id] [nvarchar](20) NULL,
-	[order_date] [date] NULL,
-	[ship_date] [date] NULL,
-	[customer_name] [nvarchar](30) NULL,
-	[region] [nvarchar](10) NULL,
-	[city] [nvarchar](20) NULL,
-	[category] [nvarchar](20) NULL,
-	[product_id] [nvarchar](50) NULL,
-	[sales] [float] NULL,
-	[quantity] [float] NULL,
-	[profit] [float] NULL
+CREATE TABLE orders_data(
+	order_id varchar(20) NULL,
+	order_date date NULL,
+	ship_date date NULL,
+	customer_name varchar(30) NULL,
+	region varchar(10) NULL,
+	city varchar(20) NULL,
+	category varchar(20) NULL,
+	product_id varchar(50) NULL,
+	sales float NULL,
+	quantity float NULL,
+	profit float NULL
 ) ;
 
 insert into orders_data values
@@ -116,14 +114,12 @@ insert into orders_data values
 ('CA-2020-149223','2020-09-06','2020-09-11','Elpida Rittenbach','Central','Saint Paul','Office Supplies','OFF-AP-10000358',77.88,6,22.5852),
 ('CA-2020-158568','2020-08-29','2020-09-02','Rick Bensley','Central','Chicago','Office Supplies','OFF-PA-10003256',64.624,7,22.6184);
 
-select * from orders_data;
+sselect * from orders_data;
 
 
---returns 
 create table returns_data
 (
-order_id [nvarchar](20),
-return_reason varchar(20)
+order_id varchar(20),return_reason varchar(20)
 );
 
 insert into returns_data values
